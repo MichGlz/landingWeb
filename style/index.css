@@ -1,0 +1,142 @@
+@import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;600&family=Smooch+Sans:wght@300;400;500&display=swap");
+:root {
+  --color-1: rgb(207, 240, 229);
+  --color-2: rgb(125, 200, 175);
+  --color-3: rgb(236, 186, 153);
+  --font-tittle: "Fredoka", sans-serif;
+  --font-body: "Smooch Sans", sans-serif;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--color-1);
+  font-family: var(--font-body);
+  font-size: 1.5rem;
+  background: linear-gradient(120deg, var(--color-1) 10%, var(--color-3) 90%);
+  background-attachment: fixed;
+  background-size: 100vw 100vh;
+}
+
+header {
+  width: 100%;
+  height: 8vh;
+  background-color: var(--color-2);
+  padding: 0 1rem;
+  position: fixed;
+  background: linear-gradient(0deg, transparent 0%, var(--color-2) 80%);
+}
+
+nav {
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+nav ul {
+  width: 100%;
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+  padding: 0 1rem;
+  font-size: 1.5rem;
+  font-family: var(--font-body);
+  font-weight: 500;
+}
+
+.heroe {
+  width: 100%;
+  min-height: 90vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.heroe h1 {
+  font-family: var(--font-tittle);
+  font-size: 7rem;
+  color: rgb(51, 53, 54);
+}
+
+.heroe p {
+  font-family: var(--font-body);
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.news-letter {
+  width: 100%;
+  padding: 4rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.input-wrapper + .input-wrapper {
+  margin-top: 1rem;
+  font-weight: 300;
+}
+
+._input {
+  height: 2rem;
+  border-radius: 5px;
+  border: none;
+  margin-left: 0.5rem;
+}
+
+.agree-field {
+  border: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+[type="checkbox"] {
+  height: 1.5rem;
+  width: 1.5rem;
+}
+
+[for="agree"] {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.button-wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  gap: 1rem;
+  align-items: center;
+}
+
+.btn {
+  padding: 0.5rem 1.2rem;
+  font-family: var(--font-tittle);
+  font-weight: 400;
+  border-radius: 5px;
+  background-color: var(--color-2);
+  font-size: 1.2rem;
+  pointer-events: none;
+  filter: grayscale(1) blur(1px);
+  transition: filter 0.2s;
+}
+
+.agree-field:valid .btn {
+  pointer-events: all;
+  cursor: pointer;
+  filter: none;
+}
