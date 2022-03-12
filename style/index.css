@@ -133,10 +133,31 @@ nav ul {
   pointer-events: none;
   filter: grayscale(1) blur(1px);
   transition: filter 0.2s;
+  position: relative;
 }
 
 .agree-field:valid .btn {
   pointer-events: all;
   cursor: pointer;
   filter: none;
+}
+
+.btn.thincking::after {
+  content: "";
+  width: 2rem;
+  height: 2rem;
+  background-color: var(--color-1);
+  position: absolute;
+  right: -2.5rem;
+  animation: turning 3s ease-in-out infinite;
+}
+
+@keyframes turning {
+  0%,
+  100% {
+    transform: rotate(0) scale(1);
+  }
+  50% {
+    transform: rotate(360deg) scale(1.2);
+  }
 }

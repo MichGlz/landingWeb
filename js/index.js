@@ -8,7 +8,7 @@ const star = () => {
   btnSubmit.addEventListener("click", (event) => {
     event.preventDefault();
     const payLoad = formInfo(inputName, inputEmail);
-    postData(payLoad, inputName, inputEmail, checkBox);
+    postData(payLoad, inputName, inputEmail, checkBox, btnSubmit);
   });
 };
 
@@ -20,8 +20,9 @@ const formInfo = (inputName, inputEmail) => {
   return customer;
 };
 
-const postData = (payLoad, inputName, inputEmail, checkBox) => {
+const postData = (payLoad, inputName, inputEmail, checkBox, btnSubmit) => {
   //   console.log(payLoad);
+  btnSubmit.classList.add("thincking");
   fetch("https://reicpe-9cc2.restdb.io/rest/babybox", {
     method: "POST",
     headers: {
@@ -33,6 +34,7 @@ const postData = (payLoad, inputName, inputEmail, checkBox) => {
     .then((res) => res.json())
     .then((data) => {
       console.log(data);
+      btnSubmit.classList.remove("thincking");
       alert(`${payLoad.name} thank you for your preference!
        your email was save`);
       inputName.value = "";
