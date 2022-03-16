@@ -1,0 +1,28 @@
+{
+  "name": "landingweb",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MichGlz/landingWeb.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MichGlz/landingWeb/issues"
+  },
+  "homepage": "https://github.com/MichGlz/landingWeb#readme",
+  "devDependencies": {
+    "vite": "^2.8.6"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.0",
+    "node-fetch": "^3.2.3"
+  }
+}
