@@ -10,7 +10,7 @@ exports.handler = async function (event, context) {
         "x-apikey": process.env.APIKEY,
         "Content-Type": "application/json",
       },
-      body: JSON.parse(event.body),
+      body: event.body,
     });
     const data = await res.json();
 
