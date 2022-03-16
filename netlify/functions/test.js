@@ -1,18 +1,22 @@
 import fetch from "node-fetch";
 require("dotenv").config();
 exports.handler = async function (event, context) {
+  console.log(event.body);
+
   const getData = async () => {
-    console.log(user);
-    const res = await fetch(endpoint + `?q={"sub":"${user.sub}"}`, {
+    const res = await fetch("https://reicpe-9cc2.restdb.io/rest/babybox", {
+      method: "POST",
       headers: {
         "x-apikey": process.env.APIKEY,
+        "Content-Type": "application/json",
       },
+      body: JSON.parse(event.body),
     });
     const data = await res.json();
-    console.log(data);
+
     return {
       statusCode: 200,
-      body: JSON.stringify(data),
+      body: event.body,
     };
   };
   return getData();

@@ -23,10 +23,17 @@ const formInfo = (inputName, inputEmail) => {
 const postData = (payLoad, inputName, inputEmail, checkBox, btnSubmit) => {
   //   console.log(payLoad);
   btnSubmit.classList.add("thincking");
-  fetch("https://reicpe-9cc2.restdb.io/rest/babybox", {
+  // fetch("https://reicpe-9cc2.restdb.io/rest/babybox", {
+  //   method: "POST",
+  //   headers: {
+  //     "x-apikey": "606d5dcef5535004310074f4",
+  //     "Content-Type": "application/json",
+  //   },
+  //   body: JSON.stringify(payLoad),
+  // })
+  fetch("/api/test", {
     method: "POST",
     headers: {
-      "x-apikey": "606d5dcef5535004310074f4",
       "Content-Type": "application/json",
     },
     body: JSON.stringify(payLoad),
